@@ -3,12 +3,16 @@
 #include "SceneList.hpp"
 #include "DxLib.h"
 
+TitleScene::TitleScene() 
+	: startTime(GetNowCount()),
+	  endTime(3000) 
+{
+
+}
+
 void TitleScene::Init()
 {
 	printfDx("TitleScene : Start\n");
-
-	startTime = GetNowCount();
-	endTime = 3000;
 }
 
 void TitleScene::Update()

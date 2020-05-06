@@ -10,15 +10,12 @@
 
 class TitleScene : public BaseScene {
 private:
-	TitleScene()  {};
-	TitleScene(const TitleScene &) {}
-	TitleScene &operator=(const TitleScene &)
-	{
-		return *this;
-	}
+	TitleScene();
+	TitleScene(const TitleScene&) = default;
+	TitleScene& operator=(const TitleScene&) = default;
 
 public:
-	~TitleScene() {};
+	~TitleScene() override {};
 	static TitleScene* GetInstance()
 	{
 		static TitleScene instance;

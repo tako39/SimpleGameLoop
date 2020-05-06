@@ -12,11 +12,8 @@ class SceneManager
 {
 private:
 	SceneManager();
-	SceneManager(const SceneManager &) {};
-	SceneManager &operator=(const SceneManager &)
-	{
-		return *this;
-	}
+	SceneManager(const SceneManager&) = default;
+	SceneManager& operator=(const SceneManager&) = default;
 
 public:
 	~SceneManager();

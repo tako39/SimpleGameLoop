@@ -8,15 +8,11 @@
 
 class BaseScene {
 public:
-	BaseScene()  {};
-	BaseScene(const BaseScene &) {};
-	BaseScene &operator=(const BaseScene &)
-	{
-		return *this;
-	};
+	BaseScene() = default;
+	BaseScene(const BaseScene& b) = default;
+	BaseScene& operator=(const BaseScene&) = default;
 
-	virtual ~BaseScene() {};
-
+	virtual ~BaseScene() {}
 public:
 	virtual void Init()   = 0;
 	virtual void Update() = 0;

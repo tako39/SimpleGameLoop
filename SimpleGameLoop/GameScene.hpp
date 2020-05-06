@@ -10,15 +10,12 @@
 
 class GameScene : public BaseScene {
 private:
-	GameScene()  {};
-	GameScene(const GameScene &) {};
-	GameScene &operator=(const GameScene &)
-	{
-		return *this;
-	}
+	GameScene() {};
+	GameScene(const GameScene&)	= default;
+	GameScene& operator=(const GameScene&) = default;
 	
 public:
-	~GameScene() {};
+	~GameScene()  override {};
 	static GameScene* GetInstance()
 	{
 		static GameScene instance;
